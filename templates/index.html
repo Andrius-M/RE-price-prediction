@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>RE Price Prediction</title>
+  </head>
+
+<body>
+ <div class="login">
+	<h1>RE Price Prediction</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict_expenses')}}"method="post">
+    	<input type="text" name="Year" placeholder="Year build" required="required" />
+		<input type="text" name="District" placeholder="District" required="required" />
+		<input type="text" name="Street" placeholder="Street" required="required" />
+		<input type="text" name="Rooms_nr" placeholder="Number of rooms" required="required" />
+		<input type="text" name="Square meters" placeholder="Square meters" required="required" />
+		<input type="text" name="Floor" placeholder="Floor" required="required" />
+		<input type="text" name="Total floor" placeholder="Total floors" required="required" />
+		
+		<input type="text" name="year_2000-2021" placeholder="year_2000-2021" required="required" />
+		<input type="text" name="year_1980-2000" placeholder="year_1980-2000" required="required" />
+		<input type="text" name="year_1960-1980" placeholder="year_1960-1980" required="required" />
+		<input type="text" name="year_1940-1960" placeholder="year_1940-1960" required="required" />
+	
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict RE price</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
