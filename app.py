@@ -22,8 +22,8 @@ def home():
 @app.route('/predict_expenses',methods=['POST'])
 def predict_expenses():
     int_features = [int(x) for x in request.form.values()]
-    print(int_features)
-    print('aaaaaaaaaaaaaaa')
+    #print(int_features)
+    #print('aaaaaaaaaaaaaaa')
     final_features = [np.array(int_features)]
     prediction = model.predict(final_features)
     output = round(prediction[0], 2)
