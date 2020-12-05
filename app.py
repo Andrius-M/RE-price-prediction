@@ -528,7 +528,7 @@ def predict_expenses():
     #output = round(prediction[0], 2)
     output = prediction[0]
 
-    return render_template('index.html', prediction_text='Predicted price $ {}'.format(np.exp(output)), dist=districts, str=streets)
+    return render_template('index.html', prediction_text='Predicted price € {}'.format(int(np.exp(output))) , dist=districts, str=streets)
 
 if __name__ == "__main__":
     app.run(debug=True)
